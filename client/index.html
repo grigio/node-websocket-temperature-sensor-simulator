@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Flat UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="vendor/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="vendor/css/flat-ui.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="vendor/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+
+      <h1>Sensors Dashboard</h1>
+
+      <div class="login-form">
+        <div class="row">
+          <div class="span4">
+            <input type="text" class="login-field" value="ws://localhost:8080" placeholder="Websocket URL (e.g ws://host:port)" id="js-ws-url" />
+          </div>
+          <div class="span7">
+            <a class="btn btn-primary btn-large" href="#" id="js-ws-url-btn">Connect</a>
+          </div>
+        </div>
+      </div>
+
+<div class="row"> <!-- ws 1 -->
+  <div class="span11">
+    <canvas id="chart1" width="400" height="100"></canvas>
+  </div>
+</div>
+
+    </div> <!-- /container -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="span7">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="vendor/js/jquery-1.8.2.min.js"></script>
+    <script src="vendor/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="vendor/js/jquery.dropkick-1.0.0.js"></script>
+    <script src="vendor/js/custom_checkbox_and_radio.js"></script>
+    <script src="vendor/js/custom_radio.js"></script>
+    <script src="vendor/js/jquery.tagsinput.js"></script>
+    <script src="vendor/js/bootstrap-tooltip.js"></script>
+    <script src="vendor/js/jquery.placeholder.js"></script>
+    <script src="vendor/js/application.js"></script>
+    <!-- Sensors additions -->
+    <script src="vendor/js/EventEmitter.js"></script>
+    <script src="vendor/js/smoothie.js"></script>
+    <script src="js/app.js"></script>
+
+    <!--[if lt IE 8]>
+      <script src="vendor/js/icon-font-ie7.js"></script>
+      <script src="vendor/js/icon-font-ie7-24.js"></script>
+    <![endif]-->
+  </body>
+</html>
