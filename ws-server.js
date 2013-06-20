@@ -26,6 +26,10 @@ function originIsAllowed(origin) {
   return true;
 }
 
+setInterval(function() {
+  sensorValue = Math.random(120)*1000;
+}, 500);
+
 wsServer.on('request', function(request) {
     if (!originIsAllowed(request.origin)) {
       // Make sure we only accept requests from an allowed origin
@@ -39,7 +43,7 @@ wsServer.on('request', function(request) {
 
     // continuos data flow
     setInterval(function() {
-        connection.sendUTF('{ "msgtype":"data", "sensortype":"temperature", "sensorid":"123", "value":"' + Math.random(120)*1000 + '" }');
+        connection.sendUTF('{ "msgtype":"data", "sensortype":"temperature", "sensorid":"123", "value":"' + sensorValue + '" }');
     }, 500);
 
     connection.on('message', function(message) {
